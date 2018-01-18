@@ -1,15 +1,14 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
 
 class Author extends Component {
-  render() {
-    return (
-      <div className="Author">
-   		<h3> {this.props.authors.map( authors =>  <p> Written by:{authors}</p>)}</h3>
-      </div>
-    );
-  }
+	render(){
+		const allAuthors = this.props.authors.map(a => {
+			return <h3>{a}</h3>
+		});
+		return (
+			<div>{allAuthors}</div>
+		);
+	}
 }
 
 export default Author;
