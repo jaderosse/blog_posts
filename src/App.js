@@ -20,9 +20,11 @@ class App extends Component {
         <Link to="/movie">Movies</Link>{' '}
         <Link to="/food">Food</Link>{' '}
         <Link to="/post">Blog</Link>{' '}
+        <Link to="/about">About</Link>
         <Route exact path="/" component={Homepage} />
         <Route path="/movie" component={FaveMovie} />
         <Route path="/food" component={FaveFood} />
+        <Route path="/about" component={About} />
         <Route path="/post" component={
           () => (<Post posts={this.props.posts} />
             )} />
